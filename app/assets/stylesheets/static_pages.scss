@@ -1,0 +1,112 @@
+$ultra-violet-ll: #C0B5D7;
+$ultra-violet-l: #8e77bb;
+$ultra-violet: #5f4b8b;
+$ultra-violet-d: #32235d;
+$ucla-gold-l: #ffe800;
+$vegas-gold: #c5b358;
+$inigo-l: #8e99f3;
+$indigo: #5c6bc0;
+$indigo-d: #26418f;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+//* { border: 1px solid yellow; }
+
+html {
+  background-color: $ultra-violet;
+}
+
+body {
+  padding: 0px 7px;
+  color: $ultra-violet-ll;
+  background-color: $ultra-violet;
+}
+
+nav.navbar {
+  padding: 0;
+}
+
+.navbar-brand { 
+//  margin-right: 10px;
+  padding: 0;
+  a {
+    color: $vegas-gold;
+    font-family: Georgia, Times, serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+    color: $ucla-gold-l;
+    }
+  }
+}
+
+a.nav-link.btn.btn-sm, a.btn.btn-sm, input.btn.btn-info.btn-sm, .pagination a, .users li a {
+  margin-right: 5px;
+  padding: 1px 2px;
+  color: $ultra-violet-l;
+  background-color: $ultra-violet;
+  border: 1px solid $ultra-violet-l;
+  text-decoration: none;
+  &:hover {
+  color: $ucla-gold-l;
+  background-color: $ultra-violet-l;
+  border: 1px solid $ucla-gold-l;
+  }
+  &:focus {
+    color: $indigo;
+    background-color: $ultra-violet-ll;
+    border: 1px solid $indigo;
+  }
+}
+
+button.navbar-toggler {
+  color: $ultra-violet-l !important;
+  background-color: $ultra-violet;
+  margin-top: 2px;
+  padding: 2px 4px;
+  border: 1px solid $ultra-violet-l !important;
+  &:hover {
+    color: $ucla-gold-l !important;
+    background-color: $ultra-violet-l;
+    border: 1px solid $ucla-gold-l !important;
+  }
+  &:focus {
+    color: $indigo;
+    background-color: $ultra-violet-ll;
+    border: 1px solid $indigo;
+  }
+}
+
+ul.dropdown-menu.show {
+  background-color: $ultra-violet;
+  padding: 1px 2px;
+  border: 1px solid $ultra-violet-l;
+  li a {
+    margin: 1px auto;
+    padding: 0px 5px;
+    color: $ultra-violet-l;
+    background-color: $ultra-violet;
+    border: 1px solid $ultra-violet-l;
+    &:hover {
+    color: $ucla-gold-l;
+    background-color: $ultra-violet-l;
+    border: 1px solid $ucla-gold-l;
+    }
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  background-color: $ultra-violet-l;
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}

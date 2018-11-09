@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <meta charset="utf-8">
+  <meta name="description" content="Get the best price by buying in group. 
+    Members (buyers, sellers) select wares, grouping, buying, delivery. 
+    GtBB include: news, experiences, Q&A, comments.">
+  <meta name="keywords" content="group, best price, sell, buy, delivery">
+  <meta name="author" content="Zvonimir Kolumbic">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= render 'layouts/shim' %>
+</head>
+<body>
+
+  <%= render 'layouts/header' %>
+
+  <% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <% end %>
+
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+
+  <%= debug(params) if Rails.env.development? %>
+
+</body>
+</html>

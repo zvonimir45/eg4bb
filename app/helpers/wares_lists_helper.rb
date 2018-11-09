@@ -1,0 +1,2 @@
+module WaresListsHelper
+end

@@ -1,0 +1,59 @@
+<% @wares.each do |ware| %>
+	<div class="p-2 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+    <!-- Card -->
+  	<div class="card" style="color: #5F4B8B;">
+  	  <div class="p-1 card-header">
+  	    <span style="float: left;"><%= ware.title %></span><span style="float: right;"><%= ware.price %> €</span>
+  	  </div>
+      <div class="p-1 card-body bg-light">
+      	<a href="#" title="<%= ware.title %>" data-toggle="modal" 
+    				data-target="#ware<%= ware.id %>" style="margin: 0 0 2px 0;">
+    		<img src="assets/<%= ware.image %>" class="card-img-top"></a>
+      </div>
+  	  <div class="p-1 card-footer">
+  	    <span class="badge badge-danger" style="float: left;"><%= ware.phase[0] %></span>
+    	    <%= ware.deadline %><span style="float: right;"><%= ware.s_location %></span> <br>
+          <span style="float: left;"><button type="button" class="btn btn-info btn-sm" style="padding: 1px 2px;">OK</button> </span>
+          </span><%= ware.target_no %>/<span><%= ware.ok_no %> </span>
+        <button type="button" class="btn btn-info btn-sm" style="margin: 0 !important; float: right; padding: 1px 2px;"
+          data-toggle="modal" data-target="#ware<%= ware.id %>">Details</button></span>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ware<%= ware.id %>" tabindex="-1" role="dialog" aria-labelledby="ware<%= ware.id %>Label" aria-hidden="true">
+      <div class="modal-dialog" role="document"> 
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ware<%= ware.id %>Label"><b><%=ware.title %></b>, <%= ware.price %> €, <%= ware.phase %></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="assets/<%= ware.image %>" class="img-fluid">
+            <p>
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Details
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                <%= ware.details.html_safe %>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <nav class="nav nav-pills nav-fill">
+              <a class="flex-sm-fill nav-link" href="wares/<%= ware.annex %>" target="_blank" >Annex</a>
+              <a class="flex-sm-fill nav-link" href="contracts/<%= ware.contract %>" target="_blank" >Contract</a>
+              <button type="button" class="btn btn-info btn-sm" style="padding: 1px 2px;" data-dismiss="modal">Close</button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<% end %>

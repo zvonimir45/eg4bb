@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm navbar-light">
+  <button class="navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fa fa-bars"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav">
+      <li class="nav-item"><%= link_to "<i class='fa fa-home'></i>".html_safe, root_path, class: "nav-link btn btn-sm", 
+        title: "Go to Homepage" %></li class="nav-item">
+      <li class="nav-item"><%= link_to "<i class='fa fa-phone'></i>".html_safe, contacts_path, class: "nav-link btn btn-sm", 
+        title: "Contacts" %></li class="nav-item">
+      <li class="nav-item"><%= link_to "<i class='fa fa-info'></i>".html_safe, about_path, class: "nav-link btn btn-sm",
+        title: "About" %> </li class="nav-item">
+      <li class="nav-item"><%= link_to "Help", help_path, class: "nav-link btn btn-sm" %></li class="nav-item">
+      <li class="nav-item"><%= link_to "<i class='fa fa-sitemap'></i>".html_safe, sitemap_path, class: "nav-link btn btn-sm",
+        title: "Sitemap" %></li class="nav-item">
+      <li class="nav-item"><%= link_to "<i class='fa fa-bullseye'></i>".html_safe, staff_path, class: "nav-link btn btn-sm", 
+        title: "Staff" %></li class="nav-item">
+      <li class="nav-item"><%= link_to "<i class='fa fa-link'></i>".html_safe, links_path, class: "nav-link btn btn-sm", 
+        title: "Links" %></li class="nav-item">
+    </ul>
+  </div>
+
+  <div class="navbar-brand" style="margin-right: 0px;">
+    <%= link_to "eG4 Best Buy", root_path, title: "Go to Homepage" %>
+  </div>
+</nav>
+
+  <p style="text-align: center; color:  #c5b358;">Ivan Dolac, 2018</p>  

@@ -1,0 +1,147 @@
+<% provide(:title, "Show Ware") %>
+<div class="container-fluid" id="main">
+
+  <h2>Show Ware No. <%= @ware.id %></h2>
+
+<div class="row">
+
+  <div class="wrapper-show">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ware.title %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @ware.category %>
+</p>
+
+<p>
+  <strong>Phase:</strong>
+  <%= @ware.phase %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @ware.brand %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @ware.image %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @ware.details %>
+</p>
+
+<p>
+  <strong>Annex:</strong>
+  <%= @ware.annex %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @ware.quantity %>
+</p>
+
+<p>
+  <strong>Quantity unit:</strong>
+  <%= @ware.q_unit %>
+</p>
+
+<p>
+  <strong>Evaluation:</strong>
+  <%= @ware.evaluation %>
+</p>
+
+<p>
+  <strong>In showroom:</strong>
+  <%= @ware.in_showroom %>
+</p>
+
+<p>
+  <strong>Source location:</strong>
+  <%= @ware.s_location %>
+</p>
+
+<p>
+  <strong>Weight kg:</strong>
+  <%= @ware.weight_kg %>
+</p>
+
+<p>
+  <strong>Length cm:</strong>
+  <%= @ware.dim_a_cm %>
+</p>
+
+<p>
+  <strong>Width cm:</strong>
+  <%= @ware.dim_b_cm %>
+</p>
+
+<p>
+  <strong>Height cm:</strong>
+  <%= @ware.dim_h_cm %>
+</p>
+
+<p>
+  <strong>Destination location:</strong>
+  <%= @ware.d_location %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @ware.price %>
+</p>
+
+<p>
+  <strong>Down payment:</strong>
+  <%= @ware.down_p %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @ware.deadline %>
+</p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @ware.contract %>
+</p>
+
+<p>
+  <strong>Bill:</strong>
+  <%= @ware.bill %>
+</p>
+
+<p>
+  <strong>Conclusion:</strong>
+  <%= @ware.conclusion %>
+</p>
+
+<p>
+  <strong>Target no:</strong>
+  <%= @ware.target_no %>
+</p>
+
+<p>
+  <strong>Ok no:</strong>
+  <%= @ware.ok_no %>
+</p>
+
+  <div>
+    <%= link_to 'Edit Ware', edit_ware_path(@ware), type: "button", 
+      class: "btn btn-info btn-sm", style: "margin-left: 5px; padding: 1px 2px;" %>
+    <%= link_to 'Wares List', wares_path, type: "button",
+      class: "btn btn-info btn-sm", style: "margin-left: 5px; padding: 1px 2px;" %>
+  </div>
+
+<br>
+
+  </div>  <!-- row -->
+</div> <!-- container-fluid -->

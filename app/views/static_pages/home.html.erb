@@ -1,0 +1,33 @@
+<main class="container-fluid">
+
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8" style="text-align: left" >
+      <h3>Microposts Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <h1 style = "margin-top: 10px; line-height: 90%;">Welcome</h1>
+  <p style = "margin-top: 5px; line-height: 90%;">to the website of the</p>
+  <div>
+    <h2 style = "margin: 5px 0 0 0; line-height: 90%;">eGroup</h2>
+    <p style = "color: #c5b358; margin-top: 5px;">for the</p>
+    <h2 style = "margin: 0; line-height: 90%;">Best Buy</h2>
+  </div>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-sm", style: "margin: 20px 0;" %>
+<% end %>
+
+<div class="row">
+  <%= render 'shared/wares_list' %>
+</div>
+
+</main>

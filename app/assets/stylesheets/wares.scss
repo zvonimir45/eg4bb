@@ -1,0 +1,12 @@
+.modal-footer button, .modal-body button, .card-footer button, .modal-footer a, div.actions input, a.btn.btn-info.btn-sm {
+  margin-right: 5px;
+  padding: 1px 4px !important; 
+  color: #BBB;
+  background-color: #777;
+  border: 1px solid #BBB !important;
+  font-size: 0.8em !important;
+  &:hover {
+  color: $ucla-gold-l;
+  background-color: #777;
+  }
+}

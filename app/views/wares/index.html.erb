@@ -1,0 +1,91 @@
+<% provide(:title, "Wares List") %>
+<div class="container-fluid" id="main">
+  <h1>Wares</h1>
+<div class="row">
+  <p id="notice"><%= notice %></p>
+  <%= link_to 'New Ware', new_ware_path,  type: "button",
+    class: "btn btn-info btn-sm", style: "margin-left: 5px; padding: 1px 2px;" %>
+</div>  <!-- row -->
+  <br />
+<div class="row">
+  <div class="table-responsive">
+    <table class="table table-bordered table-responsive">
+      <thead>
+        <tr>
+          <th>Ware No</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Phase</th>
+          <th>Brand</th>
+          <th>Image</th>
+    <!--      <th>Details</th> -->
+          <th>Annex</th>
+          <th>Quantity</th>
+          <th>Quantity unit</th>
+          <th>Evaluation</th>
+          <th>In showroom</th>
+          <th>Source location</th>
+          <th>Weight kg</th>
+          <th>Length cm</th>
+          <th>Width cm</th>
+          <th>Height cm</th>
+          <th>Destination location</th>
+          <th>Price</th>
+          <th>Down payment</th>
+          <th>Deadline</th>
+          <th>Contract</th>
+    <!--      <th>Bill</th> -->
+    <!--      <th>Conclusion</th> -->
+          <th>Target no</th>
+          <th>Ok no</th>
+          <th>Ware No</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @wares.each do |ware| %>
+          <tr>
+            <td><%= ware.id %></td>
+            <td><%= ware.title %></td>
+            <td><%= ware.category %></td>
+            <td><%= ware.phase %></td>
+            <td><%= ware.brand %></td>
+            <td><%= ware.image %></td>
+    <!--        <td><%#= ware.details %></td> -->
+            <td><%= ware.annex %></td>
+            <td><%= ware.quantity %></td>
+            <td><%= ware.q_unit %></td>
+            <td><%= ware.evaluation %></td>
+            <td><%= ware.in_showroom %></td>
+            <td><%= ware.s_location %></td>
+            <td><%= ware.weight_kg %></td>
+            <td><%= ware.dim_a_cm %></td>
+            <td><%= ware.dim_b_cm %></td>
+            <td><%= ware.dim_h_cm %></td>
+            <td><%= ware.d_location %></td>
+            <td><%= ware.price %></td>
+            <td><%= ware.down_p %></td>
+            <td><%= ware.deadline %></td>
+            <td><%= ware.contract %></td>
+    <!--        <td><%#= ware.bill %></td> -->
+    <!--        <td><%#= ware.conclusion %></td> -->
+            <td><%= ware.target_no %></td>
+            <td><%= ware.ok_no %></td>
+            <td><%= ware.id %></td>
+            <td><%= link_to 'Show', ware %></td>
+            <td><%= link_to 'Edit', edit_ware_path(ware) %></td>
+            <td><%= link_to 'Destroy', ware, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div> <!-- class="table-responsive" --> 
+
+</div>  <!-- row -->
+<div class="row">
+  <%= link_to 'New Ware', new_ware_path,  type: "button",
+    class: "btn btn-info btn-sm", style: "margin-left: 5px; padding: 1px 2px;" %>
+</div> <!-- row -->
+  <br />
+</div> <!-- container-fluid -->

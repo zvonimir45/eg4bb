@@ -1,0 +1,14 @@
+<% provide(:title, "Edit Ware") %>
+<div class="container-fluid" id="main">
+  <h1>Editing Ware No. <%= @ware.id %></h1>
+<div class="row">
+  <%= render 'form', ware: @ware %>
+</div>  <!-- row -->
+<div class="row">
+  <%= link_to 'Show Ware', @ware, type: "button", 
+    class: "btn btn-info btn-sm", style: "margin-left: 5px; padding: 1px 2px;" %>
+  <%= link_to 'Wares List', wares_path, type: "button",
+    class: "btn btn-info btn-sm", style: "margin-left: 5px; padding: 1px 2px;" %>
+</div>  <!-- row -->
+  <br />
+</div> <!-- container-fluid -->

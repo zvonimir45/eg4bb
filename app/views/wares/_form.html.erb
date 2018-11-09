@@ -1,0 +1,100 @@
+<%= form_with(model: ware, local: true) do |form| %>
+  <% if ware.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ware.errors.count, "error") %> prohibited this ware from being saved:</h2>
+
+      <ul>
+      <% ware.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, :style => "width:150px;" %>
+    <%= form.label :phase %>
+    <%= form.select :phase, (["Pick", "Group", "Wait", "Reference"]) %>
+    <%= form.label :category %>
+    <%= form.select :category, (["BabyKidToy", "ClothingShoeJewelry", "GroceryBeautyHealth", 
+      "ComputerPhoneElectronics","HomeGardenTool", "HobbySportOutdoor", " CarBikeBoat", 
+      " BookCollectionSouvenir", "Other"]) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+    <%= form.label :image %>
+    <%= form.text_field :image, :style => "width:150px;" %>
+    <%= form.label :annex %>
+    <%= form.text_field :annex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evaluation %>
+    <%= form.text_field :evaluation, :style => "width:30px;" %>
+    <%= form.label :in_showroom, :style => "margin-left: 1em;" %>
+    <%= form.check_box :in_showroom %>
+    <%= form.label :deadline, :style => "margin-left: 1em;"  %>
+    <%= form.date_select :deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :details %> <br />
+    <%= form.text_area :details, rows: 15, cols: 75 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity%>
+    <%= form.number_field :quantity, :style => "width:50px;"  %>
+    <%= form.label :quantity_unit %>
+    <%= form.select :q_unit, (["piece", "kilogram", "gram", "liter", "mililiter"]) %>
+    <%= form.label :target_no %>
+    <%= form.number_field :target_no, :style => "width:50px;" %>
+    <%= form.label :ok_no %>
+    <%= form.number_field :ok_no, :style => "width:50px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source_location %>
+    <%= form.text_field :s_location %>
+    <%= form.label :destination_location %>
+    <%= form.select :d_location, (["atHome", "ateG4BB", "atDeliverer", "atDuty", "atSource"]) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight_kg %>
+    <%= form.text_field :weight_kg, :style => "width:50px;" %>
+    <%= form.label :length_cm %>
+    <%= form.number_field :dim_a_cm, :style => "width:50px;" %>
+    <%= form.label :width_cm %>
+    <%= form.number_field :dim_b_cm, :style => "width:50px;" %>
+    <%= form.label :height_cm %>
+    <%= form.number_field :dim_h_cm, :style => "width:50px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, :style => "width:50px;" %>
+    <%= form.label :down_p %>
+    <%= form.text_field :down_p, :style => "width:50px;"  %>
+    <%= form.label :contract %>
+    <%= form.text_field :contract, :style => "width:150px;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bill %><br />
+    <%= form.text_area :bill, rows: 15, cols: 50 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conclusion %><br />
+    <%= form.text_area :conclusion, rows: 10, cols: 50 %>
+  </div>
+<br />
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<br />
+<% end %>
